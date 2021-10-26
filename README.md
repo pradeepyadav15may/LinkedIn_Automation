@@ -1,2 +1,2 @@
 # SampleReactRedux
-Sample React-Redux repo for modular code in  Campaign Portal.
+Sample React-Redux repo for modular code.
