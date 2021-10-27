@@ -1,2 +1,3 @@
-# SampleReactRedux
-Sample React-Redux repo for modular code.
+# LinkedIn Automation
+
+JavaScript code to accept the pending connections in 1 shot through console.
