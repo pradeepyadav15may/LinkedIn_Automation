@@ -2,6 +2,8 @@
  *  Pre-requisite - Load all "pending connection request" tiles and make sure they are visible.
  *  If you like this trick, follow me on Twitter @PradeepDevelopr
  */
+console.clear();
+let thankYouTimer = 1000;
 
 function scrollToTargetAdjusted(buttonID){
     const element = document.getElementById(buttonID);
@@ -36,7 +38,7 @@ function handleClick(btn, index) {
 
         // FINALLY click on the button to accept the connection requests.
         btn.click();
-    }, 500 * index);
+    }, 1000 * index);
 }
 
 function acceptAllPendingInvitations() {
@@ -49,10 +51,18 @@ function acceptAllPendingInvitations() {
     // loop through all the accept buttons
     for (let index = 0; index < acceptButtonsList.length; index++) {
         const btn = acceptButtonsList[index];
-
+        thankYouTimer = thankYouTimer + 1000;
+        
         // util function
         handleClick(btn, index);
     }
+    
+    setTimeout(function () {
+      console.log(
+        `%c Thank You Everyone !!`,
+        "color:blue; font-size:30px"
+      );
+    }, thankYouTimer);
 }
 
 // TRIGGER acceptAllPendingInvitations() FROM THE CONSOLE TO START ACCEPTING THE PENDING CONNECTION REQUESTS.
